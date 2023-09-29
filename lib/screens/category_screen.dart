@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meal_app/widgets/category_grid_item.dart';
+import '../widgets/category_grid_item.dart';
 
 import '../data/dummy_data.dart';
 
@@ -21,7 +21,10 @@ class CategoryScreen extends StatelessWidget {
         ),
         children: [
           for (final category in availableCategories)
-            CategoryGridItem(category: category)
+            CategoryGridItem(
+              category: category,
+              availableMeals: const [],
+            )
         ],
       ),
     );
